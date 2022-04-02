@@ -30,3 +30,9 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# VSCode
+.vscode
+
+# eslint
+.eslintrc.js*
