@@ -10,19 +10,13 @@ import {
   FormLabel,
   Heading,
   HStack,
-  IconButton,
   Input,
   Text,
-  useColorMode,
   VStack,
 } from "@chakra-ui/react";
-import {FaSun, FaMoon} from "react-icons/fa";
 import React from "react";
 
 function Login() {
-  const {colorMode, toggleColorMode} = useColorMode();
-  const isDark = colorMode === "dark";
-
   return (
     <Box
       w={["full", "lg"]}
@@ -34,18 +28,11 @@ function Login() {
       borderRadius={10}
       bgColor="gray.100"
     >
-      <VStack spacing={5} align="flex-start" w="full">
-        <IconButton
-          ml={2}
-          icon={isDark ? <FaSun /> : <FaMoon />}
-          isRound="true"
-          onClick={toggleColorMode}
-        />
+      <VStack spacing={5} mt="2em" mb="4em" align="flex-start" w="full">
         <VStack spacing={1} align={["flex-start", "center"]} w="full">
           <Heading>Sign in to your account</Heading>
           <Text>to enjoy all of our cool features</Text>
         </VStack>
-
         <FormControl>
           <FormLabel>E-Mail Address</FormLabel>
           <Input
@@ -63,7 +50,7 @@ function Login() {
             placeholder="Enter your password"
           />
         </FormControl>
-        <HStack w="full" justify="center">
+        <HStack p="15px" w="full" justify="center">
           <Checkbox>Remember me.</Checkbox>
           <Button variant="link" colorScheme="blue">Forgot Password?</Button>
         </HStack>
