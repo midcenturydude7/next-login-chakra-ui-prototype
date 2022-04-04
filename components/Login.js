@@ -12,11 +12,16 @@ import {
   HStack,
   Input,
   Text,
+  useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
 
 function Login() {
+  const color = useColorModeValue("gray.800", "gray.400");
+  const buttonColor = useColorModeValue("gray.100", "gray.700");
+
+
   return (
     <Box
       w={["full", "lg"]}
@@ -26,7 +31,7 @@ function Login() {
       border={["none", "1px"]}
       borderColor={["", "gray.300"]}
       borderRadius={10}
-      bgColor="gray.100"
+      color={color}
     >
       <VStack spacing={5} mt="2em" mb="4em" align="flex-start" w="full">
         <VStack spacing={1} align={["flex-start", "center"]} w="full">
@@ -57,12 +62,13 @@ function Login() {
         <Button
           rounded="md"
           colorScheme="blue"
+          color={buttonColor}
           w="full"
         >
           Sign in
         </Button>
         <HStack w="full" justify="center">
-          <Checkbox>Don't have an account?</Checkbox>
+          <Text>Don't have an account?</Text>
           <Button variant="link" colorScheme="blue">Sign Up</Button>
         </HStack>
       </VStack>
