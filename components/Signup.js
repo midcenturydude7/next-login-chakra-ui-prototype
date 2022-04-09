@@ -17,7 +17,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
-function Login() {
+function Signup() {
   const color = useColorModeValue("gray.800", "gray.400");
   const buttonColor = useColorModeValue("gray.100", "gray.700");
 
@@ -35,11 +35,19 @@ function Login() {
     >
       <VStack spacing={5} mt="2em" mb="4em" align="flex-start" w="full">
         <VStack spacing={1} align={["flex-start", "center"]} w="full">
-          <Heading>Sign in to your account</Heading>
-          <Text>to enjoy all of our cool features</Text>
+          <Heading>Create your account</Heading>
+          <Text>Please sign up to continue</Text>
         </VStack>
         <FormControl>
-          <FormLabel>E-Mail Address</FormLabel>
+          <FormLabel>Username</FormLabel>
+          <Input
+            rounded="none"
+            variant="filled"
+            placeholder="Enter your username"
+          />
+        </FormControl>
+        <FormControl>
+          <FormLabel>Email</FormLabel>
           <Input
             rounded="none"
             variant="filled"
@@ -55,9 +63,18 @@ function Login() {
             placeholder="Enter your password"
           />
         </FormControl>
-        <HStack p="15px" w="full" justify="center">
+        <FormControl>
+          <FormLabel>Confirm Password</FormLabel>
+          <Input
+            rounded="none"
+            variant="filled"
+            type="password"
+            placeholder="Re-enter your password"
+          />
+        </FormControl>
+        <HStack p="15px" w="full" justify="left
+        ">
           <Checkbox>Remember me.</Checkbox>
-          <Button variant="link" colorScheme="blue">Forgot Password?</Button>
         </HStack>
         <Button
           rounded="md"
@@ -65,21 +82,15 @@ function Login() {
           color={buttonColor}
           w="full"
         >
-          Sign in
+          Sign up
         </Button>
         <HStack w="full" justify="center">
-          <Text>Don't have an account?</Text>
-          <Button
-            variant="link"
-            colorScheme="blue"
-            path="/signup"
-          >
-            Sign Up
-          </Button>
+          <Text>Already have an account?</Text>
+          <Button variant="link" colorScheme="blue">Sign in</Button>
         </HStack>
       </VStack>
     </Box>
   );
 }
 
-export default Login;
+export default Signup;

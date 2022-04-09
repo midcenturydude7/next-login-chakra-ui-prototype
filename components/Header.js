@@ -29,8 +29,15 @@ function Header() {
 
   return (
     <>
-      <VStack>
-        <Flex w="100%" bgColor={bgColor} p="1em">
+      <VStack
+        boxShadow="0 10px 17px rgba(119, 119, 119, 0.4)"
+        borderBottom="1px solid rgba(153, 153, 153, 0.5)"
+      >
+        <Flex
+          w="100%"
+          bgColor={bgColor}
+          p="1em"
+        >
           <Heading
             ml="8"
             mt="2"
@@ -42,7 +49,11 @@ function Header() {
             <Text fontSize="0.77em">Built with Next.js, React, Chakra UI</Text>
           </Heading>
           <Spacer/>
-          <IconButton ml={2} icon={<FaLinkedin />} isRound="true" />
+          <IconButton
+            ml={2}
+            icon={<FaLinkedin />}
+            isRound="true"
+          />
           <IconButton ml={2} icon={<FaGithub />} isRound="true" />
           <IconButton ml={2} icon={<FaGitlab />} isRound="true" />
           {/* Toggle color mode between light and dark */}
