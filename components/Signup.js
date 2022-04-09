@@ -33,9 +33,9 @@ function Signup() {
       borderRadius={10}
       color={color}
     >
-      <VStack spacing={5} mt="2em" mb="4em" align="flex-start" w="full">
+      <VStack spacing={5} mt="1.5em" mb="4em" align="flex-start" w="full">
         <VStack spacing={1} align={["flex-start", "center"]} w="full">
-          <Heading>Create your account</Heading>
+          <Heading mb="5px">Create your account</Heading>
           <Text>Please sign up to continue</Text>
         </VStack>
         <FormControl>
@@ -74,7 +74,7 @@ function Signup() {
         </FormControl>
         <HStack p="15px" w="full" justify="left
         ">
-          <Checkbox>Remember me.</Checkbox>
+          <Checkbox>Remember me</Checkbox>
         </HStack>
         <Button
           rounded="md"
@@ -86,7 +86,12 @@ function Signup() {
         </Button>
         <HStack w="full" justify="center">
           <Text>Already have an account?</Text>
-          <Button variant="link" colorScheme="blue">Sign in</Button>
+          <Button
+            variant="link"
+            colorScheme="blue"
+          >
+            <a href="/">Sign in</a>
+          </Button>
         </HStack>
       </VStack>
     </Box>

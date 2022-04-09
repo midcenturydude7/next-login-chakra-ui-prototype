@@ -33,10 +33,14 @@ function Login() {
       borderRadius={10}
       color={color}
     >
-      <VStack spacing={5} mt="2em" mb="4em" align="flex-start" w="full">
+      <VStack spacing={5} mt="1.5em" mb="4em" align="flex-start" w="full">
         <VStack spacing={1} align={["flex-start", "center"]} w="full">
-          <Heading>Sign in to your account</Heading>
-          <Text>to enjoy all of our cool features</Text>
+          <Heading mb="5px">Sign in to your account</Heading>
+          <Text
+            textAlign="center"
+          >
+            A simple login application built with Next.js, React and Chakra UI
+          </Text>
         </VStack>
         <FormControl>
           <FormLabel>E-Mail Address</FormLabel>
@@ -56,7 +60,7 @@ function Login() {
           />
         </FormControl>
         <HStack p="15px" w="full" justify="center">
-          <Checkbox>Remember me.</Checkbox>
+          <Checkbox>Remember me</Checkbox>
           <Button variant="link" colorScheme="blue">Forgot Password?</Button>
         </HStack>
         <Button
@@ -74,7 +78,7 @@ function Login() {
             colorScheme="blue"
             path="/signup"
           >
-            Sign Up
+            <a href="/signup">Sign Up</a>
           </Button>
         </HStack>
       </VStack>
