@@ -45,21 +45,38 @@ function Header() {
             fontWeight="semibold"
             color={textColor}
           >
-            Simple Login Application:
-            <Text fontSize="0.77em">Built with Next.js, React, Chakra UI</Text>
+            Simple Login Application
+            <Text
+              fontSize="0.73em"
+              pb="10px"
+            >
+              Built with Next.js, React, Chakra UI
+            </Text>
           </Heading>
           <Spacer/>
           <IconButton
-            ml={2}
-            icon={<FaLinkedin />}
+            mt={2}
+            ml={3}
+            icon={<a href="https://www.linkedin.com/in/matthewgriffes/"><FaLinkedin /></a>}
             isRound="true"
           />
-          <IconButton ml={2} icon={<FaGithub />} isRound="true" />
-          <IconButton ml={2} icon={<FaGitlab />} isRound="true" />
+          <IconButton
+            mt={2}
+            ml={3}
+            icon={<a href="https://github.com/midcenturydude7"><FaGithub /></a>}
+            isRound="true"
+          />
+          <IconButton
+            mt={2}
+            ml={3}
+            icon={<a href= "https://gitlab.com/midCenturyDude7"><FaGitlab /></a>}
+            isRound="true"
+          />
           {/* Toggle color mode between light and dark */}
           <IconButton
-            ml="10"
-            mr="10"
+            mt={2}
+            ml={8}
+            mr={10}
             icon={isDark ? <FaSun /> : <FaMoon />}
             isRound="true"
             onClick={toggleColorMode}
